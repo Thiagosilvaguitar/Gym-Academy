@@ -1,0 +1,196 @@
+@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap";
+
+:root {
+   --color-violet: #6567dd
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   border: 0;
+}
+
+body {
+   background: #282a36;
+   color: white;
+   font-family: 'Source Sans Pro', sans-serif;
+}
+
+header {
+   padding: 32px;
+   border-bottom: 2px solid #333;
+   background: rgba(0, 0, 0, 0.274);
+}
+
+header div {
+   text-align: center;
+}
+
+body div h1 {
+   text-align: center;
+}
+
+.links a {
+   color: white;
+   font-size: 18px;
+   line-height: 28px;
+   margin: 0 16px;
+   text-decoration: none;
+}
+
+/* transition um atraso na exibição de cor*/
+.links a:hover {
+   color: var(--color-violet);
+   transition: 700ms;
+}
+
+body div p a {
+   color: rgba(202, 196, 196, 0.836);
+   font-size: 18px;
+   padding: 4px;
+   /* distancia entre o texto e o link*/
+   text-decoration: none;
+}
+
+body div p a:hover {
+   color: var(--color-violet);
+   transition: 500ms;
+}
+
+#Perfil {
+   text-align: center;
+   padding: 32px;
+}
+
+/*Arredondamento da imagem*/
+#Perfil img {
+   border-radius: 50%;
+   border: 5px solid var(--color-violet);
+   margin-bottom: 32px;
+   height: 300px;
+}
+
+#Perfil h1 {
+   font-size: 42px;
+   line-height: 52px;
+   /* espaçamento entre as linhas do texto*/
+   font-weight: bold;
+}
+
+#Perfil h2 {
+   font-size: 24px;
+   line-height: 34px;
+   font-weight: normal;
+   margin-top: 8px;
+   opacity: 1.8;
+}
+
+#Perfil p {
+   max-width: 500px;
+   margin: auto;
+   /*para o paragrafo ficar no centro da tela*/
+   font-size: 18px;
+   line-height: 34px;
+}
+
+#rodape {
+   text-align: center;
+}
+
+#rodape a {
+   color: white;
+   margin: 8px;
+   border-bottom: 1px solid var(--color-violet);
+   /*Um traço em baixo do texto com cor*/
+   text-decoration: none;
+}
+
+#rodape a:hover {
+   transition: 500ms;
+   color: var(--color-violet);
+}
+
+/*========Cards========*/
+
+.cards {
+   max-width: 800px;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 20px;
+}
+
+.card {
+   background-color: var(--color-violet);
+}
+
+.card-image-container img {
+   width: 100%;
+}
+
+.card-content,
+.card-info {
+   padding: 24px;
+}
+
+.card-info {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+.card-price {
+   background-color: #7159c1;
+   filter: brightness(90%);
+   padding: 5px 20px;
+   border-radius: 20px;
+   text-align: center;
+}
+
+
+/*=======Modal Overlay ==========*/
+
+.modal-overlay {
+   background-color: rgba(0, 0, 0, 0.7);
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   opacity: 0;
+   visibility: hidden;
+   /**Visibilidade so botão*/
+}
+
+.modal {
+   background-color: white;
+   width: 90%;
+   height: 90%;
+   margin: 5vh auto;
+   /*5vh visão da altura*/
+   position: relative;
+   /*Se torna Pai da classe .close-modal para exibição do botao */
+}
+/*Botao X*/
+.modal .close-modal {
+   color: black;
+   position: absolute;
+   /*Qualquer lugar na tela eu posso configurar*/
+   right: 8px;
+   top: 8px;
+   cursor: pointer;
+   /*Coloca a Mãosinha no botão*/
+
+}
+
+/*=======Modal Ativo ==========*/
+
+.modal-overlay.active {
+   opacity: 1;
+   visibility: visible;
+}
+/*Video do youtube*/
+iframe{
+   width: 100%;
+   height:90%;
+   position: absolute;
+   top: 5%;
+}
